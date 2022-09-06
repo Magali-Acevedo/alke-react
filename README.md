@@ -9,9 +9,11 @@ Este proyecto se realizó con el curso de SkillUp brindado por Alkemy.org
 Tecnologias: React.js - HTML 5 - CSS3
 
 
-######LOGIN
+###### LOGIN
+
 Se realizo la utentificación de usuario con validación de datos
 Guardado de token en sessionStorage.
+
 
 usuario: challenge@alkemy.org
 contraseña: react

@@ -1,0 +1,28 @@
+input:-webkit-autofill { color: #2a2a2a !important; }
+
+.search {
+    width: 250px;
+    background-color: #252525;
+    padding: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+.search-input {
+    background-color:transparent;
+    outline: none;
+    border: none;
+    color: rgb(168, 168, 168);
+
+}
+.search-input:focus {
+    background-color: transparent;
+    
+}
+.btn-search{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    
+}

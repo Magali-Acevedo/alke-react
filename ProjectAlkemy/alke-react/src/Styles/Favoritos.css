@@ -1,0 +1,14 @@
+.fav-title {
+    color: #EDEDED;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 20px ;
+}
+
+.fav-p {
+    color: #DA0037;
+}
+
+.Lista.lista-fav{
+    min-height: calc(100vh - 148px) ;
+}

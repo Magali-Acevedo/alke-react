@@ -26,12 +26,13 @@ const DetailsMovie = () => {
   return (
     <>
       {!token && <Navigate to="/" />}
-      {!movie && <p>CARGANDO...</p>}
+      {!movie && <p className="cargando">CARGANDO...</p>}
       {movie && (
         <>
           <article className="detailsMovie">
             <figure>
               <img className="detailsMovie-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="poster de la pelicula" />
+              <a href="/listado" className="arrow-left"> 🠔 </a>
             </figure>
             <section className="details-section">
               <div className="cont-one">
@@ -44,7 +45,7 @@ const DetailsMovie = () => {
               <h5> {movie.release_date.substring(0,4)} </h5>
               <span>{movie.original_language} </span>
               </div>
-              <h5>Género</h5>
+
               <ul className="container-genero">
                 { movie.genres.map(oneGenre => <li key={oneGenre.id} > {oneGenre.name} </li>)}
               </ul>

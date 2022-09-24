@@ -72,14 +72,16 @@ function App() {
       
         return oneMovie.id !== movieDate.id
       });
+     // const section = document.querySelector('.lista-fav');
+      //section.innerHTML="";
       setFavorites(tempMoviesFavs);
       localStorage.setItem('favs', JSON.stringify(moviesDelete));
       
       console.log(tempMoviesFavs);
       console.log("Se elimino la pelicula");
     }
-
-    
+    //solucion momentanea a la carga del array
+    window.location.href = window.location.href;
 
   }
 

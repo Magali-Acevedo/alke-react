@@ -1,7 +1,10 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import '../Styles/Favoritos.css';
 
 function Favoritos (props) {
+
+  const token = sessionStorage.getItem("token");
     /*const [ favorites, setFavorites ] = useState([]);
 
     useEffect(() => {
@@ -15,6 +18,7 @@ function Favoritos (props) {
     },[])*/
     return(
         <>
+          {!token && <Navigate to="/" />}
         <h2 className="fav-title">FAVORITOS</h2>
        
         <section className="Lista lista-fav" >
@@ -30,7 +34,7 @@ function Favoritos (props) {
               <div className="Card-container">
               <div className="Card-container--info">
                 <h3 className="Card-title">{ oneMovie.title }</h3>
-                <span className="Card-star">{ oneMovie.vote_average}</span>
+                <span className="Card-star">{ oneMovie.range}</span>
                 <p className="Card-description">
                 {oneMovie.overview.substring(0,125)}...
                 </p> 

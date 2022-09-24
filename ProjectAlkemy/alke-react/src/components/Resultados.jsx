@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { Navigate } from "react-router-dom";
 import '../Styles/Resultados.css';
 
 const Resultados =(props)=>{
-  
+  const token = sessionStorage.getItem("token");
     let query = new URLSearchParams(window.location.search);
     let keyword = query.get(`keyword`);
 
@@ -23,6 +24,7 @@ const Resultados =(props)=>{
     
     return(
         <>
+        {!token && <Navigate to="/" />}
         <h1 className="res-title">Resultados de la busqueda</h1>
         <p className="busqueda">Todo lo que tenemos sobre: {keyword}</p>
         <section className="Lista lista-resultado" >
@@ -38,9 +40,9 @@ const Resultados =(props)=>{
               <div className="Card-container--info">
                 <h3 className="Card-title">{ oneMovie.title }</h3>
                 <span className="Card-star">{ oneMovie.vote_average}</span>
-                {/* <p className="Card-description">
+                 <p className="Card-description">
                 {oneMovie.overview.substring(0,125)}...
-                </p> */}
+                </p> 
               </div>
               <a className="btn-primary btn-view" href={`/DetailsMovie?ID=${oneMovie.id}`}>
                 VER +
